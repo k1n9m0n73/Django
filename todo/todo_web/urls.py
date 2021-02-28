@@ -1,4 +1,4 @@
-"""todoapp URL Configuration
+"""todo_web URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from todo import views
 
 urlpatterns = [
+    #####################home_page########################################## 
+    path('', views.index, name="todo"), 
+    ####################give id no. item_id name or item_id=i.id ########### 
+    path('del/', views.remove, name="del"), 
+    ######################################################################## 
     path('admin/', admin.site.urls),
 ]
